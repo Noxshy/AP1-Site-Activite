@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Club de Tennis - Contact</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        /* Styles pour la section des sponsors */
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            text-align: center;
+            color: #2b7a2b;
+        }
+
+        section h5 {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        section h4 {
+            color: #388E3C;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 0px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../images/balle-tennis.png" alt="Tennis Ball" class="ball left-ball">
+            <h1 class="title">Nos sponsors</h1>
+            <img src="../images/balle-tennis.png" alt="Tennis Ball" class="ball right-ball">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="coachs.html">Nos Entraîneurs</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="horaires.html">Horaires</a></li>
+                <li><a href="sponsors.html">Nos Sponsors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="connexion.html" id="login-link">Se connecter</a></li>
+            </ul>
+        </nav>
+        
+        
+        
+    </header>
+<main>
+    <section>
+        <h2>Nos sponsors :</h2>
+        <h5>(Vous pouvez cliquer sur les images pour plus de détails)</h5>
+        <br>
+
+        <h4>Artengo</h4>
+        <!-- Image Map pour Artengo -->
+        <img src="../images/artengo-logo.png" alt="Logo Artengo" usemap="#artengo-map">
+
+        <map name="artengo-map">
+            <area target="_blank" alt="Artengo" title="Site officiel Artengo" href="https://www.artengo.fr/" coords="15,48,185,76" shape="rect">
+            <area target="_blank" alt="Artengo Raquette" title="Raquette de Tennis Artengo" href="https://www.decathlon.fr/tous-les-sports/tennis/raquettes-de-tennis-artengo-expert" coords="239,62,45" shape="circle">
+        </map>
+
+        <h4>Gaël Monfils</h4>
+        <!-- Image Map pour Gaël Monfils -->
+        <img src="../images/monfils.jpg" alt="Gaël Monfils" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="_blank" alt="Gaël Monfils ATP" title="Profil de Gaël Monfils" href="https://www.atptour.com/en/players/gael-monfils/mc65/overview" coords="10,168,11,114,16,95,34,86,43,80,43,67,37,53,33,39,37,25,47,17,61,11,70,12,82,20,85,29,85,37,85,50,85,57,82,72,93,79,102,86,113,94,131,104,142,104,158,90,166,77,174,65,182,51,184,35,192,43,196,48,208,49,220,51,226,55,231,62,214,75,189,78,175,99,162,118,147,129,125,129,102,119,98,139,99,156,146,168" shape="poly">
+            <area target="_blank" alt="Raquette Gaël Monfils" title="Raquette de Gaël Monfils" href="https://www.artengo.fr/gael-monfils-artengo-une-nouvelle-aventure" coords="149,168,175,146,189,129,199,104,207,87,217,74,227,67,239,61,254,59,265,62,272,69,277,80,277,97,273,110,267,122,253,134,236,141,216,141,198,144,181,152,166,168" shape="poly">
+        </map>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Club de Tennis. Tous droits réservés.</p>
+</footer>
+<script src="../javascript/loginStatus.js"></script>
+</body>
+</html>

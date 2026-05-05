@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club de Tennis - Tarifs</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../images/balle-tennis.png" alt="Tennis Ball" class="ball left-ball">
+            <h1 class="title">Nos tarifs</h1>
+            <img src="../images/balle-tennis.png" alt="Tennis Ball" class="ball right-ball">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="coachs.html">Nos Entraîneurs</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="horaires.html">Horaires</a></li>
+                <li><a href="sponsors.html">Nos Sponsors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="connexion.html" id="login-link">Se connecter</a></li>
+            </ul>
+        </nav>
+        
+        
+        
+        
+        
+    </header>
+
+    <main>
+        <section class="fade-in">
+            <h2>Tarifs d'adhésions annuelle</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Nombre</th>
+                        <th>Réduction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nb de personnes au total</strong></td>
+                        <td>6</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dont adultes</strong></td>
+                        <td>2</td>
+                        <td>Pas de réduction</td>
+                    </tr>
+                    <tr>
+                        <td>Dont enfants de moins de 12 ans</td>
+                        <td>1</td>
+                        <td>30% de réduction</td>
+                    </tr>
+                    <tr>
+                        <td>Dont enfants de 12 à 16 ans</td>
+                        <td>0</td>
+                        <td>20% de réduction</td>
+                    </tr>
+                    <tr>
+                        <td>Dont enfants de 16 à 18 ans</td>
+                        <td>1</td>
+                        <td>10% de réduction</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Simulateur d'adhésion annuelle</h2>
+            <form id="reservation-form2">
+                <div class="form-group">
+                    <label for="adulteAd">Nombre d'adultes :</label>
+                    <input type="number" id="adulteAd" name="adulteAd" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="enfantmoins12">Nombre d'enfants de moins de 12 ans :</label>
+                    <input type="number" id="enfantmoins12" name="enfantmoins12" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="enfant12a16">Nombre d'enfants de 12 à 16 ans :</label>
+                    <input type="number" id="enfant12a16" name="enfant12a16" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="enfant16a18">Nombre d'enfants de 16 à 18 ans :</label>
+                    <input type="number" id="enfant16a18" name="enfant16a18" min="0" value="0" required>
+                </div>
+                <button type="button" id="bouttonAd">Calculer</button>
+            </form>
+            <h1 class="CoutTotal">Coût total :</h1>
+            <p id="cout-totalAd">0€</p>
+
+            <h2>Réservation de terrain</h2>
+            <table>
+                <thead>
+                    <th>Âge</th>
+                    <th>Prix</th>
+                </thead>
+                <tr>
+                    <td>Adulte</td>
+                    <td>5€ / 30 minutes</td>
+                </tr>
+                <tr>
+                    <td>Enfant</td>
+                    <td>2€ / 30 minutes</td>
+                </tr>
+            </table>
+
+            <!-- Simulateur de réservation -->
+            <h2>Simulateur de réservation de terrain</h2>
+            <form id="reservation-form1">
+                <div class="form-group">
+                    <label for="adulte">Nombre d'adultes :</label>
+                    <input type="number" id="adulte" name="adulte" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="enfant">Nombre d'enfants :</label>
+                    <input type="number" id="enfant" name="enfant" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Durée (en minutes) :</label>
+                    <input type="number" id="duree" name="duree" min="30" step="30" value="30" required>
+                </div>
+                <button type="button" id="boutton">Calculer</button>
+            </form>
+
+            <h1 class="CoutTotal">Coût total :</h1>
+            <p id="cout-total">0€</p>
+        </section>
+
+
+        <h2>Prix de location d'équipement</h2>
+            <table>
+                <thead>
+                    <th>Article</th>
+                    <th>Prix</th>
+                </thead>
+                </tr>
+                <tr>
+                    <td>Raquette</td>
+                    <td>5€ / heure</td>
+                </tr>
+                <tr>
+                    <td>Balles</td>
+                    <td>2€ / heure</td>
+                </tr>
+            </table>
+
+            <h2>Simulateur de location d'équipement</h2>
+            <form id="reservation-form3">
+                <div class="form-group">
+                    <label for="nombre-raquettes">Nombre de raquettes :</label>
+                    <input type="number" id="nombre-raquettes" name="nombre-raquettes" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre-balles">Nombre de balles :</label>
+                    <input type="number" id="nombre-balles" name="nombre-balles" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="duree-location">Durée de location (en heures) :</label>
+                    <input type="number" id="duree-location" name="duree-location" min="1" step="1" value="1" required>
+                </div>
+                <button type="button" id="boutton-location">Calculer</button>
+            </form>
+            <h2 class="CoutTotal">Coût total :</h2>
+            <p id="cout-total-location">0€</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 Club de Tennis. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../javascript/calculateur.js"></script>
+    <script src="../javascript/loginStatus.js"></script>
+
+
+</body>
+</html>

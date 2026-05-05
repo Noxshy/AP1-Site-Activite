@@ -1,0 +1,834 @@
+/* Variables de couleurs */
+:root {
+    --primary-color: #388E3C;
+    --secondary-color: #81C784;
+    --background-color: #f5f5f5;
+    --text-color: #212121;
+    --header-gradient-start: #388E3C;
+    --header-gradient-end: #2E7D32;
+    --nav-gradient-start: #2E7D32;
+    --nav-gradient-end: #81C784;
+    --button-background: #81C784;
+    --button-hover: #66BB6A;
+}
+
+/* Appliquer un décalage aux sections liées par des ancres */
+section {
+    scroll-margin-top: 100px; /* Décalage lié à la hauteur du header + nav */
+    padding-top: 20px; /* Ajout d'espace pour éviter le chevauchement */
+}
+
+/* Style global */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Styles pour les balles */
+.ball {
+    width: 50px;
+    height: 50px;
+    animation: bounce 2s infinite;
+}
+
+.left-ball {
+    margin-right: 20px;
+}
+
+.right-ball {
+    margin-left: 20px;
+}
+
+/* Effet de gradient dynamique sur le header */
+header {
+    background: linear-gradient(135deg, var(--header-gradient-start), var(--header-gradient-end));
+    color: white;
+    padding: 50px 20px; /* Ajusté pour une mise en page stable */
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Barre de navigation */
+nav {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, var(--nav-gradient-start), var(--nav-gradient-end));
+    border-bottom: 4px solid var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Main (contenu principal) */
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.gallery img {
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: var(--nav-gradient-start);
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
+
+/* BALLE DE TENNIS */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e5ffe5;
+}
+
+/* En-tête */
+.header {
+    background-color: #2b7a2b; /* Vert */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+}
+
+.left-ball {
+    margin-right: 20px;
+}
+
+.right-ball {
+    margin-left: 20px;
+}
+
+/* Frise chronologique */
+.timeline {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline h2 {
+    text-align: center;
+    color: #2b7a2b;
+    margin-bottom: 30px;
+}
+
+.timeline-container {
+    position: relative;
+    margin: 20px auto;
+    padding: 10px 0;
+    max-width: 800px;
+}
+
+/* Points sur la ligne */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 4px;
+    height: 100%;
+    background-color: #2b7a2b;
+}
+
+/* Point supérieur */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    background-color: #2b7a2b;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Point inférieur */
+.timeline-container .timeline-end-point {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    background-color: #2b7a2b;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Rectangle de la frise */
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: white;
+    border-left: 4px solid #2b7a2b;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Invisible par défaut */
+    transform: translateX(-50px); /* Décalage initial */
+    transition: all 0.6s ease-out, transform 0.3s ease;
+}
+
+.timeline-item.appear {
+    opacity: 1; /* Visible quand l'animation se déclenche */
+    transform: translateX(0); /* Position finale */
+}
+
+/* Effet de survol */
+.timeline-item:hover {
+    transform: scale(1.05); /* Grossit de 5% */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Accentue l'ombre */
+}
+
+.timeline-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #2b7a2b;
+}
+
+.timeline-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* interactive-gallery */
+
+.interactive-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.interactive-gallery img {
+    max-width: 400px; /* Taille uniforme pour toutes les images */
+    width: 100%; /* S'adapte au conteneur */
+    height: auto; /* Préserve les proportions */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-gallery img:hover {
+    transform: scale(1.05); /* Effet de zoom */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Supprime tout comportement bloquant des maps */
+.interactive-gallery map area {
+    pointer-events: auto; /* Permet le clic sur les zones définies */
+}
+
+
+/* FORMULAIRE DE CONTACT */
+
+.text_contact {
+    text-align: center;
+}
+
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--form-background);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--input-focus);
+    box-shadow: 0 0 5px rgba(129, 199, 132, 0.5);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn_submit {
+    width: 100%;
+    background: var(--button-background);
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.btn_submit:hover {
+    background: var(--button-hover);
+    transform: scale(1.01);
+}
+
+.btn_submit:active {
+    background: var(--button-hover);
+}
+
+
+/* EVENEMENTS */
+
+.event {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.event ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.event ul li strong {
+    color: var(--secondary-color);
+}
+
+/* COACHS */
+
+/* Section des entraîneurs */
+.coaches-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.coaches-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Conteneur de cartes */
+.coaches-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Carte individuelle */
+.coach-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image dans la carte */
+.coach-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 15px;
+}
+
+/* Texte et listes dans la carte */
+.coach-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.coach-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.coach-card h4 {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.coach-card ul {
+    list-style: none;
+    padding: 0;
+    color: #333;
+}
+
+.coach-card ul li {
+    margin: 5px 0;
+}
+
+
+/* TARIFS */
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+thead th {
+    background-color: #2b7a2b;
+    color: white;
+    padding: 10px;
+}
+
+tbody td, th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e6ffe6;
+}
+
+
+/* Style du formulaire */
+
+/* reservation-form1 */
+#reservation-form1 {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reservation-form1 .form-group {
+    margin-bottom: 15px;
+}
+
+#reservation-form1 label {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+#reservation-form1 input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#reservation-form1 input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(129, 199, 132, 0.5);
+    outline: none;
+}
+
+#reservation-form1 button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reservation-form1 button:hover {
+    background-color: var(--secondary-color);
+}
+
+#cout-total {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#cout-totalAd {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#cout-total-location {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+
+.CoutTotal {
+    text-align: center;
+}
+
+/* reservation-form2 */
+#reservation-form2 {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reservation-form2 .form-group {
+    margin-bottom: 15px;
+}
+
+#reservation-form2 label {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+#reservation-form2 input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#reservation-form2 input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(129, 199, 132, 0.5);
+    outline: none;
+}
+
+#reservation-form2 button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reservation-form2 button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* reservation-form3 */
+#reservation-form3 {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reservation-form3 .form-group {
+    margin-bottom: 15px;
+}
+
+#reservation-form3 label {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+#reservation-form3 input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#reservation-form3 input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(129, 199, 132, 0.5);
+    outline: none;
+}
+
+#reservation-form3 button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reservation-form3 button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Style pour les horaires */
+.schedule-section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.schedule-section h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.schedule-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule-section ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-section ul li:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Bouton de déconnexion */
+#welcome-section {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px 30px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn_submit {
+    background-color: #388E3C;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.btn_submit:hover {
+    background-color: #2E7D32;
+}
+
+.welcome-section {
+    text-align: center;
+    background-color: #81C784;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section des formulaires */
+.form-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px 30px;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+
+

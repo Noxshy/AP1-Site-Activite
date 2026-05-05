@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion/Inscription</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../images/balle-tennis.png" alt="Tennis Ball" class="ball left-ball">
+            <h1 class="title">Connexion / Création de Compte</h1>
+            <img src="../images/balle-tennis.png" alt="Tennis Ball" class="ball right-ball">
+        </div>
+    </header>
+
+    <main>
+        <!-- Section de création de compte -->
+        <section class="form-section" id="signup-section">
+            <h2>Créer un compte</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-username">Nom d'utilisateur *</label>
+                    <input type="text" id="signup-username" name="signup-username" required placeholder="Choisissez un nom d'utilisateur">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Mot de passe *</label>
+                    <input type="password" id="signup-password" name="signup-password" required placeholder="Choisissez un mot de passe">
+                </div>
+                <div id="signup-error-div"></div>
+                <button type="submit" class="btn_submit">Créer un compte</button>
+            </form>
+        </section>
+
+        <!-- Section de connexion -->
+        <section class="form-section" id="login-section">
+            <h2>Se connecter</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Nom d'utilisateur *</label>
+                    <input type="text" id="login-username" name="login-username" required placeholder="Votre nom d'utilisateur">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Mot de passe *</label>
+                    <input type="password" id="login-password" name="login-password" required placeholder="Votre mot de passe">
+                </div>
+                <div id="login-error-div"></div>
+                <button type="submit" class="btn_submit">Connexion</button>
+            </form>
+        </section>
+
+        <!-- Message de bienvenue (masqué par défaut) -->
+        <section class="welcome-section" id="welcome-section" style="display: none;">
+            <h2>Bienvenue, <span id="user-name"></span> !</h2>
+            <p>Vous êtes connecté avec succès.</p>
+            <button id="go-home-button" class="btn_submit">Aller à l'accueil</button>
+            <button id="logout-button" class="btn_submit">Déconnexion</button>
+        </section>        
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Club de Tennis. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../javascript/login.js"></script>
+</body>
+</html>
